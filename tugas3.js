@@ -14,7 +14,7 @@
     }
     for (const j in array) {
         array[j].sort()
-        for (const i in array[j]) {hasilAkhir += array[j][i]}
+        for (const k in array[j]) {hasilAkhir += array[j][k]}
     }
     console.log(parseInt(hasilAkhir))
 })(1734802491350518)//input param
