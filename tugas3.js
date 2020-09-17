@@ -1,5 +1,5 @@
 (num => {
-    if (typeof num !== 'number'){console.log('Harus diisi "DERET ANGKA"'); return}
+    if (typeof num !== 'number' || num == null){console.log('Harus diisi "DERET ANGKA"'); return}
     let array = [], smt = [], hasilAkhir = ''
     let sNum = num.toString(), pushClear =()=>{array.push(smt); smt= []}
     for (let i = 0; i < sNum.length; i++) {
@@ -12,11 +12,9 @@
             pushClear()
         }
     }
-    for (let j = 0; j < array.length; j++) {
+    for (const j in array) {
         array[j].sort()
-        for (let k = 0; k < array[j].length; k++) {
-            hasilAkhir += array[j][k]
-        }
+        for (const i in array[j]) {hasilAkhir += array[j][i]}
     }
     console.log(parseInt(hasilAkhir))
 })(1734802491350518)//input param
